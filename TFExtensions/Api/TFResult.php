@@ -1,5 +1,5 @@
 <?php
-  require('./TFExtensions/Result.php');
+  require('../common/Result.php');
 
   Class TFResult extends Result {
     private $tfSuccess;

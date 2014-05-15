@@ -1,5 +1,5 @@
 <?php
-  include('./TFExtensions/Result.php');
+  include('../common/Result.php');
 
   Class BarcodeResult extends Result{
     private $code;
