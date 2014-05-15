@@ -16,7 +16,7 @@
 
       # parse JSON response
       try {
-        $jsonArr = extract_json_str($output);
+        $jsonArr = self::extract_json_str($output);
         $jsonArrSize = count($jsonStrArr);
         $tf;     # TF assoc array
         if ($jsonArrSize > 1) {
@@ -53,7 +53,7 @@
     /**********************************************
       Extracts JSON objects from array of strings
     **********************************************/
-    private function extract_json_str ($array) {
+    private function extract_json_str($array) {
       $imploded = implode('', $array);
       preg_match_all('~\{(?:[^{}]|(?R))*\}~', $imploded, $result);
       return $result[0];
